@@ -123,29 +123,131 @@
             float: left;
             font-size:14px;
             font-weight: 700;
+            
 
         }
         #daohang li a{
-            
+            padding-bottom: 5px;
             color:black;
 
         }
         #guochanbrands,#outbrands{
+            padding:20px;
             width:500px;
-            height:500px;
+            /* height:500px; */
             position:absolute;
             left: 0;
-            bottom:-500px;
-            display: flex;
-            align-content:space-between;
-            /* display: none; */
+            top:180px;
+            z-index: 10;
+            display: none;
+            background-color:white;
 
         }
-        #guochanbrands li,#outbrands li{
-            width:50px;
-            height:10px;
-            /* display: none; */
+         #guochanbrands li,#outbrands li{
+            float: left;
+            padding:8px 0;
+          }
 
+          #pinpaizhizaoshang,#newproduct{
+              width: 1090px;
+              margin:0 auto;
+              height:361px;
+              padding:20px 0;
+
+          }
+          #pinpaizhizaoshang span:nth-of-type(1),#newproduct span:nth-of-type(1){
+              font-size:26px;   
+              font-weight: 700; 
+              margin-right:20px;     
+          }
+          #pinpaizhizaoshang span:nth-of-type(2),#newproduct span:nth-of-type(2){
+              font-size:14px;          
+          }
+          #indexShowBox1{
+              padding:20px 0;
+              width:1090px;
+              height:320px;      
+          }
+          #indexShowBox1 a:nth-of-type(2){
+              padding:0 0 0 5px;
+             
+          }
+          #indexShowBox1 a:nth-of-type(3){
+              padding:0 0 5px 5px;
+             
+          }
+          #indexShowBox1 a:nth-of-type(4){
+              padding:5px  0 0 5px;
+             
+          }
+          #indexShowBox2{
+            padding:20px 0;
+            width:1090px;
+            height:300px;
+            display: flex;
+            justify-content: space-between;
+          }
+
+          #indexShowBox1>a,#indexShowBox2>a{
+              float: left;
+          }
+          #indexShowBox2>a{
+              position: relative;
+          }
+          #indexShowBox2>a>div{
+             position: absolute;
+             top:280px;
+             left:50px;
+          }
+
+          #indexShowBox2>a>img{
+              width:265px;
+              height:265px;
+          }
+
+          #introducePic>div>img{
+              width:1349px;
+              height:418px;
+          }
+
+          #introducePic{
+            position: relative;
+            width:1349px;
+              height:418px;
+              margin:0 auto;
+            
+        }
+        #introducePic div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        #introducePic div img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        #introducePic div img:nth-child(1){
+            opacity: 1;
+        }
+        #introducePic ul{
+            position: absolute;            
+            list-style: none;
+            right: 50px;
+            bottom:15px;
+            z-index: 2;
+        }
+        #introducePic ul li{
+            float: left;
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            margin-left: 15px;
+            border-radius: 50%;
+        }
+        #introducePic ul li:nth-child(1){
+            background-color:#B4A078;
         }
 
 
@@ -196,14 +298,14 @@
                         <li><img src="img/IMG_2509(20191018-122800).jpg" style="width:14px;height:14px" alt=""><a href="">首页</a></li>
                         <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="">国产品牌</a></li>
                         <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="">海外精选</a></li>
-                        <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="">唯品会</a></li>
+                        <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="">尾品会</a></li>
                         <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="">为你严选</a></li>
                     </ul>
                     
-
+<!-- 导航的悬浮菜单 -->
                     <div id="guochanbrands">
                             
-                        <li>自然堂</li>
+                        <!-- <li>自然堂</li>
                         <li>谢馥春</li>
                         <li>戴春林</li>
                         <li>丽黛佳</li>
@@ -222,10 +324,24 @@
                         <li>完美日记</li>
                         <li>百雀羚</li>
                         <li>薇诺娜</li>
-                        <li>相宜本草</li>
+                        <li>相宜本草</li> -->
 
                     </div>
                     <div id="outbrands">
+                        <!-- <li>迪奥</li>
+                        <li>MAC</li>
+                        <li>纪梵希</li>
+                        <li>CPB</li>
+                        <li>资生堂</li>
+                        <li>悦木之源</li>
+                        <li>SKⅡ</li>
+                        <li>兰蔻</li>
+                        <li>娇兰</li>
+                        <li>倩碧</li>
+                        <li>迪奥</li>
+                        <li>MAC</li>
+                        <li>纪梵希</li>
+                        <li>CPB</li>
                         <li>迪奥</li>
                         <li>MAC</li>
                         <li>纪梵希</li>
@@ -246,28 +362,176 @@
                         <li>兰蔻</li>
                         <li>娇兰</li>
                         <li>倩碧</li>
+                        <li>资生堂</li>
+                        <li>悦木之源</li>
+                        <li>SKⅡ</li>
+                        <li>兰蔻</li>
+                        <li>娇兰</li>
+                        <li>倩碧</li> -->
 
-                    </div>
+                    </div> 
                     
-
-                    
-
-
                 </div>
             </div>
             
         </div>
     </div>
 
+<!-- 轮播图 -->
 
-    <!-- <div id="introducePic">
+    <div id="introducePic">
         <div>
-            <img src="img/lunbotu.png" alt="">
+            <img src="img/轮播图1.jpg" alt="">
+            <img src="img/轮播图2.jpg" alt="">
+            <img src="img/轮播图3.jpg" alt="">
+            <img src="img/轮播图4.jpg" alt="">
+  
         </div>
-        轮播图
-    </div> -->
+        <ul id="btnBox">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+    </div>
+<!-- 首页的大图列表 -->
+
+    <div id="pinpaizhizaoshang">
+        <span>品牌制造商</span> <span>工厂直达消费者，剔除品牌溢价</span>
+
+
+        <div id="indexShowBox1">
+            <a href=""><img src="img/img01.png" alt=""></a>
+            <a href=""><img src="img/img02.png" alt=""></a>
+            <a href=""><img src="img/img03.png" alt=""></a>
+            <a href=""><img src="img/img04.png" alt=""></a>
+            
+        </div>
+
+    </div>
+
+    <div id="newproduct">
+        <span>新品首发</span> <span>为你寻觅世间好物</span>
+        <div id="indexShowBox2">
+                <a href=""><img src="img/u=2749781127,1724844220&fm=26&gp=0.jpg" alt=""> 
+                    <div>
+                    <h3>海蓝之谜面霜</h3>
+                    <h5>￥2200</h5>
+                    </div></a>
+                <a href=""><img src="img/u=287603938,3187388742&fm=26&gp=0.jpg" alt="">
+                    <div>
+                        <h3>雅诗兰黛小棕瓶</h3>
+                        <h5>￥500</h5>
+                    </div></a>
+                <a href=""><img src="img/timg.jpg" alt="">
+                    <div>
+                        <h3>芙丽芳丝洁面乳</h3>
+                        <h5>￥180</h5>
+                    </div></a>
+                <a href=""><img src="img/tim9g.jpg" alt="">
+                    <div>
+                        <h3>贝德玛卸妆水</h3>
+                        <h5>￥150</h5>
+                    </div></a>
+                
+            </div>
+
+    </div>
+
+    <div id="xianshigou">
+
+    </div>
 </body>
 </html>
+<script src="js/yemian.js"></script>
+
 <script>
-var 
+window.onload = function(){
+    //展示海外品牌导航
+    createLi(50,"#outbrands");
+    let liDoms1 = $("#outbrands").children;
+    let myTimer = setInterval(()=>{
+        //看看图片有没有渲染出来？？
+        if(liDoms1[liDoms1.length-1].offsetHeight>0){
+            clearInterval(myTimer);
+            showLi("#outbrands");
+        }
+    },100);
+
+
+    //展示国产品牌导航
+    createLi(50,"#guochanbrands");
+    let liDoms2 = $("#guochanbrands").children;
+    let myTimer2 = setInterval(()=>{
+        //看看图片有没有渲染出来？？
+        if(liDoms2[liDoms2.length-1].offsetHeight>0){
+            clearInterval(myTimer2);
+            showLi("#guochanbrands");
+        }
+    },100);
+
+   var daoHang=$("#daohang").getElementsByTagName("li");
+   var aAdaohang=$("#daohang").getElementsByTagName("a");
+    for(let i=0;i<aAdaohang.length;i++){
+        aAdaohang[i].onmouseover=function(){
+            this.style.cssText=`
+            color:#B4A078;
+            border-bottom:3px #B4A078 solid;
+            `
+        }
+        aAdaohang[i].onmouseout=function(){
+            this.style.color="black";
+            this.style.border="none";
+        }
+
+    }
+    //二级导航
+    var time1=time2=null;
+   daoHang[1].onmouseover=$("#guochanbrands").onmouseover=function(){
+       clearTimeout(time1);
+       $("#guochanbrands").style.display="block"; 
+   }
+   $("#guochanbrands").onmouseout=daoHang[1].onmouseout=function(){
+        time1=setTimeout( function(){
+             $("#guochanbrands").style.display="none";
+         },400)
+    }
+ 
+
+   daoHang[2].onmouseover=$("#outbrands").onmouseover=function(){
+       clearTimeout(time2);
+       $("#outbrands").style.display="block";
+    }
+
+    $("#outbrands").onmouseout=daoHang[2].onmouseout=function(){
+        time2=setTimeout( function(){
+            $("#outbrands").style.display="none";
+    },400)}
+
+    //轮播图
+    //1、自动播放 
+    autoPlay();
+    //2、鼠标放入停止
+    $("#introducePic").onmouseover = function(){
+        stopPlay();
+    }
+    
+    //3、鼠标离开继续播放
+    $("#introducePic").onmouseout = function(){
+        autoPlay();
+    }
+
+    //4、点击按钮跳转到指定的图片
+    let liDoms = $("#btnBox").children;
+    for(let i=0;i<liDoms.length;i++){
+        liDoms[i].onclick = function(){
+            goImg(i);
+        }
+    }
+
+}
+
+
 </script>
