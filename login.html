@@ -289,7 +289,7 @@
             font-size: 12px;
             line-height: 33px;
         }
-        /* 登录 */
+        /* 登录css */
         #loginbg{
             margin:0 auto;
             width:1350px;
@@ -299,14 +299,142 @@
             position: relative;
         }
         #loginBox{
-            width:384px;
+            width:310px;
             height: 483px;
             background-color: white;
             z-index: 5;
             position: absolute;
             top:82px;
             right:180px;
+            padding:0 40px;
+            overflow: hidden;
         }
+        #formBox>div{
+            height: 20px;   
+            margin:30px 0; 
+        }
+        #formBox>div>h4:nth-of-type(1){
+            border-right: 1px #dddddd solid;
+        }
+        #formBox>div>h4{
+            width:150px;
+            float: left;
+            font-size: 18px;
+            text-align: center;
+            font-weight: normal; 
+        }
+        #formBox>form>div:nth-of-type(1),#formBox>form>div:nth-of-type(2),#formBox>form>div:nth-of-type(3){
+            width:300px;
+            height:37px;
+            border:1px #e8e8e8 solid;
+            float: left;
+            margin-bottom: 15px;
+        }
+        #formBox>form>div:nth-of-type(1)>input{
+            width:200px;
+            height:23px;
+            border: none;
+            border-left:1px #e8e8e8 solid;
+            margin:8px;
+            padding-left:8px ;
+            float: left;
+        }
+        #formBox>form>div:nth-of-type(2){
+            box-sizing: border-box;
+            background-color: #f7f9fa;
+            position: relative;
+            text-align: center;
+            padding-top:13px;
+            font-size: 12px;
+            color:#45494c;
+            
+
+        }
+        #formBox>form>div:nth-of-type(2)>img{
+            float: left;
+            position: absolute;
+            left: 0;
+            top:0;
+            border:2px #c9cbcf solid;
+            
+        }
+        #identifyCode{
+            width:190px;
+            height: 18px;
+            border: none;
+            margin:10px;
+        }
+        #identifyCode+button{
+            width:89px;
+            height: 37px;
+            border: none;
+            background-color: #eeeeee;
+           
+        }
+        #formBox>form>input{
+            width:300px;
+            height:37px;
+            text-align: center;
+            background-color: #b4a078;
+            font-size: 18px;
+            border:none;
+            color: #fffff2;
+            margin:25px 0 15px 0;
+
+        }
+        #formBox>form>div:nth-of-type(4){
+          height: 20px;
+          margin-bottom: 60px;
+
+
+        } 
+        #formBox>form>div:nth-of-type(4)>input{
+            float: left;
+            /* -webkit-appearance: none;
+            display: block; */
+            /* width:16px;
+            height:16px;
+            background: url("img/duigou.png"); */
+
+        } 
+        #formBox>form>div:nth-of-type(4)>p{
+            float: left;
+            color:#999999;
+            font-size: 13px;
+
+
+        } 
+        #formBox>form>div:nth-of-type(4)>p>a{
+            
+            color:#333333;
+            font-size: 13px;
+
+
+        } 
+        #otherWays{
+            /* height:60px; */
+            width:390px;
+            background-color: #f5f3ef;
+            position: absolute;
+            left: 0;
+            padding:20px 0 -0 35px;
+        }
+        #otherWays>a{
+            position: absolute;
+            right:50px;
+            font-size: 12px;
+            color:#999999;
+        }
+        #formBox>span{
+            position: absolute;
+            right:50px;
+            color:#666666;
+            font-size: 12px;
+        }
+        #formBox>form{
+            margin-top:60px;
+        }
+
 
        
         
@@ -381,6 +509,33 @@
 
     <div id="loginbg">
         <div id="loginBox">
+          <div id="formBox">
+            <div>
+                <h4>手机号登录</h4>
+                <h4>邮箱登录</h4>
+            </div>
+            <span>使用密码验证登录</span>
+
+            <form action="">
+                <div><img src="img/shoujidenglu.png" alt="" style="float: left;"><input type="text" id="username" placeholder="请输入手机号">
+                </div>
+                <div><img src="img/youhua.png" alt="">向右滑动滑块填充拼图</div>
+                <div><input type="text" id="identifyCode" placeholder="请输入短信验证码"><button>获取验证码</button></div>
+                <input type="submit" value="手机号快捷登录">
+                
+                <div><input type="checkbox"><p>我同意<a href="https://reg.163.com/agreement_mobile_wap.shtml?v=20171127">《服务条款》</a>和<a href="https://reg.163.com/agreement_mobile_ysbh_wap.shtml?v=20171127">《网易隐私政策》</a></p></div>
+            </form>
+           </div>
+
+           <!-- 其他登录方式 -->
+            <div id="otherWays">
+                <img src="img/weixindenglu.png" alt="">
+                <img src="img/qqdenglu.png" alt="">
+                <img src="img/weibodenglu.png" alt="">
+                <img src="img/wangyizhanghao.png" alt="">
+                <a href="https://mob.163.com/web/helpcenter?from=webzj">遇到问题？</a>
+
+            </div>
 
         </div>
 
