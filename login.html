@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录/注册</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        body{
+            background-color: #f5f5f5;
+        }
+        #header{
+            background-color: #ffffff;
+            border-bottom: #e2e2e2 2px solid;
+        }
+        a{
+            text-decoration: none;
+        }
+        #banner01{
+            width:100%;
+            height: 36px;
+            line-height: 36px;
+            background-color: #333;
+            position: relative;
+        }
+        #ban01Box{
+            width:1090px;
+            height:36px;
+            margin:0 auto;
+            position: absolute;
+            right:0;
+        }
+        #ban01Box>div{
+            width:471px;
+            height:50px;
+            position: absolute;
+            right: 20px;
+            
+        }
+        #ban01Box>div>div{
+            float: left;
+            
+        }
+        #ban01Box>div>div>a{
+            color:#cccccc;
+            margin:5px;
+            font-size:12px;
+        }
+        #indexlogo{
+            width:180px;
+            height:120px;
+
+        }
+        #banner02{
+            width:1090px;
+            height:180px;
+            margin:0 auto;
+            position: relative;
+        }
+        #search{
+            width:532px;
+            height:36px;
+            position:absolute;
+            top:45px;
+            right:183px;
+            float:right;
+            border: 1px solid #B4A078;
+            border-radius: 20px;
+            position: relative;
+        }
+        #shoppingCar{
+            width:134px;
+            height:38px;
+            float: right;
+            position:absolute;
+            top:45px;
+            right:0;
+            border: 1px solid #B4A078;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 38px;
+            color:#B4A078;
+
+        }
+        #searchBox{
+            width:402px;
+            height:30px;
+            border:none;
+            position:absolute;
+            left:38px;
+            top:2px;
+            
+        }
+        #searchLogo{
+            padding-left:10px;
+            padding-top:10px;
+        }
+        #search>span{
+            position: absolute;
+            top:8px;
+            right:20px;
+            color:#B4A078;
+        }
+        #jieshao{
+            width:444px;
+            height:10px;
+            padding-left:15px;
+            position: absolute;
+            bottom: -20px;
+            font-size:12px;
+            display: flex;
+            justify-content:space-between;
+        }
+        #daohang{
+            width: 500px;
+            height:30px;
+            display: flex;
+            justify-content:space-between;
+            margin-top:25px ;
+            position: absolute;
+            bottom: 0;
+            
+        }
+        #daohang li{
+            float: left;
+            font-size:14px;
+            font-weight: 700;
+            
+
+        }
+        #daohang li a{
+            padding-bottom: 5px;
+            color:black;
+
+        }
+        #daohang li:nth-of-type(2) a{
+            padding-bottom: 5px;
+            color:#B4A078;
+            border-bottom:3px #B4A078 solid;
+
+        }
+        #guochanbrands,#outbrands{
+            padding:20px;
+            width:500px;
+            /* height:500px; */
+            position:absolute;
+            left: 0;
+            top:180px;
+            z-index: 10;
+            display: none;
+            background-color:white;
+
+        }
+         #guochanbrands li,#outbrands li{
+            float: left;
+            padding:8px 0;
+          }
+
+
+
+        /* footer */
+        #footer{
+            width:100%;
+            /* height: 298px; */
+            background-color: #414141;
+        }
+        #footer01{
+            background-color: white;
+            
+        }
+        #footer01>div{
+            width:1090px;
+            height:298px;
+            margin:0 auto;
+        }
+        #footer01>div>div{
+            width:360px;
+            height:205px;
+            border-right:1px #e9e9e9 solid;
+            float: left;
+            margin:60px 0;
+        }
+        #footer01>div>div:nth-of-type(3){
+            border: none;
+        }
+        #footer01>div>div:nth-of-type(1) h5,#footer01>div>div:nth-of-type(2) h5,#footer01>div>div:nth-of-type(3) h5{
+            margin:0 auto;
+            width:67px;
+            height:14px;
+            font-size: 16px;
+            font-weight: normal;
+            color:black ;
+            
+        }
+        #footer01>div>div:nth-of-type(1) div{
+            margin:0 auto;
+            width:194px;
+            height:102px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        #footer01>div>div:nth-of-type(2) p{
+            margin:0 auto;
+            width:290px;
+            margin-top: 36px;
+            font-size: 14px;
+        }
+        #footer01>div>div:nth-of-type(2) p>img{
+            margin:0 7.5px;
+        }
+
+
+        #footer01>div>div:nth-of-type(3) div{
+            margin:0 auto;
+            width:110px;
+            margin-top: 30px;
+        }
+        #footer01>div>div:nth-of-type(3)  h6{
+            margin:0 auto;
+            color:#deb478;
+            width:126px;
+            font-size: 12px;
+        }
+
+        #footer02{
+            height:250px;
+            background-color: #414141;
+            width:1090px;
+            margin:0 auto;
+        }
+        #footer02>div:nth-of-type(1){
+            padding-top: 10px;
+            height:80px;
+            width: 1090px;
+            margin:0 auto;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: #4f4f4f 1px solid;
+        }
+        #footer02>div:nth-of-type(2){
+            
+            height:130px;
+            
+        }
+        #footer02>div>div{
+            float: left;
+            width:220px;
+            height:64px;
+            
+        }
+        #footer02>div:nth-of-type(1)>div>img{
+            float: left;
+        }
+        #footer02>div:nth-of-type(1)>div>h5{
+            padding: 18px  0 18px  10px;
+            font-size:20px;
+            color: white;
+            font-weight: normal;
+            float: left;
+        }
+        #footer02>div:nth-of-type(2)>ul{
+            margin:0 auto;
+            width: 820px;
+            margin-top:22px;
+        }
+
+        #footer02>div:nth-of-type(2)>ul>li{
+            float: left;
+            width: 80px;
+            height: 15px;
+            border-right:2px #999990 solid;
+            color:#999990;
+            font-size: 12px;
+            text-align: center;
+        }
+        #footer02>div:nth-of-type(2)>p{
+            margin:0 auto;
+            width: 1090px;
+            text-align: center;
+            color:#999990;
+            font-size: 12px;
+            line-height: 33px;
+        }
+        /* 登录 */
+        #loginbg{
+            margin:0 auto;
+            width:1350px;
+            height: 600px;
+            background:url("img/780500_24.jpg") ;
+            background-size:100%;/*设置背景图充满元素*/
+            position: relative;
+        }
+        #loginBox{
+            width:384px;
+            height: 483px;
+            background-color: white;
+            z-index: 5;
+            position: absolute;
+            top:82px;
+            right:180px;
+        }
+
+       
+        
+
+
+    
+    </style>
+</head>
+
+<body>
+    
+    <div id="header">
+        <div id="headbox">
+            <div id="banner01">
+                <div id="ban01Box">
+
+                    <div>
+                        <div><a href="login.html">登录/注册</a></div>
+                        <div><a href="">我的订单</a></div>
+                        <div><a href="">会员</a></div>
+                        <div><a href="">甄选家</a></div>
+                        <div><a href="">企业采购</a></div>
+                        <div><a href="">客户服务</a></div>
+                        <div><a href="">APP</a></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="bannerbox">
+                <div id="banner02">
+
+                    <img src="img/A7A561D4189964421FECD1857F7DD064.png" alt="" id="indexlogo">
+
+                    <div id="search">
+                        <img src="img/9Q)4T25S6LKCK8P9}Q5AAK2.png" alt="" id="searchLogo">
+                        <input type="text" id="searchBox">
+                        <span>搜索</span>
+                        <div id="jieshao">
+                            <a href="">山羊绒围巾8折</a>
+                            <a href="">回馈金卡买11得33</a>
+                            <a href="">保温杯 限时7折</a>
+                            <a href="">即溶咖啡 直降54</a>
+                        </div>
+                    </div>
+
+                    <div id="shoppingCar">购物车</div>
+
+                    <ul id="daohang">
+                        <li><img src="img/IMG_2509(20191018-122800).jpg" style="width:14px;height:14px" alt=""><a href="index.html">首页</a></li>
+                        <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="page01.html">国产品牌</a></li>
+                        <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="page02.html">海外精选</a></li>
+                        <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="page03.html">尾品会</a></li>
+                        <li><img src="img/IMG_2509(20191018-122800).jpg" alt=""style="width:14px;height:14px"><a href="page04.html">为你严选</a></li>
+                    </ul>
+                    
+<!-- 导航的悬浮菜单 -->
+                    <div id="guochanbrands">
+          
+
+                    </div>
+                    <div id="outbrands">
+                       
+
+                    </div> 
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="loginbg">
+        <div id="loginBox">
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+        
+
+        <!-- footer -->
+        <div id="footer">
+                <div id="footer01">
+                    <div>
+                        <div>
+                            <H5>客户服务</H5>
+                            <div>
+                                <img src="img/kefu.png" alt="">
+                                <img src="img/fankui.png" alt=""> 
+                            </div>
+                        </div>
+        
+                        <div>
+                            <h5>何为严选</h5>
+                            <p>网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品 <br> 关注我们: 
+                                <img src="img/footer1.png" alt=""><img src="img/footer2.png" alt=""><img src="img/footer3.png" alt="">
+                            </p>
+                        </div>
+        
+                        <div>
+                            <h5>扫码下载严选APP</h5>
+                            <div>
+                                <img src="img/erweima.png" alt="">
+                            </div>
+                            <h6>下载领1000元新人礼包</h6>
+                        </div>
+                    </div>
+                    
+                </div>
+        
+                <div id="footer02">
+                    <div>
+                        <div><img src="img/yi.png" alt=""><h5> 网易自营电商</h5></div>
+                        <div><img src="img/dunpai.png" alt=""><h5>30天无忧退换货</h5> </div>
+                        <div><img src="img/yunfei.png" alt=""><h5>满88元免邮费</h5> </div>
+                        <div><img src="img/pinzhi.png" alt=""><h5>品质保证</h5> </div>
+                    </div>
+        
+                    <div>
+                        <ul>
+                        <li>关于我们</li>
+                        <li>帮助中心</li>
+                        <li>售后服务</li>
+                        <li>配送与验收</li>
+                        <li>商务合作</li>
+                        <li>企业采购</li>
+                        <li>开放平台</li>
+                        <li>搜索推荐</li>
+                        <li>友情链接</li>
+                        <li>廉正举报</li></ul> <br>
+        
+                        <p>食品经营许可证：JY13301080111719出版物经营许可证：新出发滨字第0132号妙得ICP证号：ICP 证浙B2-20160106浙杭食药监械经营备20171029号营业执照网易公司版权所有 © 1997-2019 <br>
+                        无线电发射设备销售备案：42201919712647（浙杭）网械企备字[2019]第00119号（粤）网械平台备字（2019）第00004号单用途商业预付卡备案证：330100AAC0024</p>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
+<script src="js/yemian.js"></script>
+
+<script>
+window.onload = function(){
+    //展示海外品牌导航
+    createLi(50,"#outbrands");
+    let liDoms1 = $("#outbrands").children;
+    let myTimer = setInterval(()=>{
+        //看看图片有没有渲染出来？？
+        if(liDoms1[liDoms1.length-1].offsetHeight>0){
+            clearInterval(myTimer);
+            showLi("#outbrands");
+        }
+    },100);
+
+
+    //展示国产品牌导航
+    createLi(50,"#guochanbrands");
+    let liDoms2 = $("#guochanbrands").children;
+    let myTimer2 = setInterval(()=>{
+        //看看图片有没有渲染出来？？
+        if(liDoms2[liDoms2.length-1].offsetHeight>0){
+            clearInterval(myTimer2);
+            showLi("#guochanbrands");
+        }
+    },100);
+
+   var daoHang=$("#daohang").getElementsByTagName("li");
+   var aAdaohang=$("#daohang").getElementsByTagName("a");
+    for(let i=0;i<aAdaohang.length;i++){
+        if(i!=1){
+        aAdaohang[i].onmouseover=function(){
+            this.style.cssText=`
+            color:#B4A078;
+            border-bottom:3px #B4A078 solid;
+            `
+        }
+        aAdaohang[i].onmouseout=function(){
+            this.style.color="black";
+            this.style.border="none";
+        }}
+
+    }
+    //二级导航
+    var time1=time2=null;
+   daoHang[1].onmouseover=$("#guochanbrands").onmouseover=function(){
+       clearTimeout(time1);
+       $("#guochanbrands").style.display="block"; 
+   }
+   $("#guochanbrands").onmouseout=daoHang[1].onmouseout=function(){
+        time1=setTimeout( function(){
+             $("#guochanbrands").style.display="none";
+         },400)
+    }
+ 
+
+   daoHang[2].onmouseover=$("#outbrands").onmouseover=function(){
+       clearTimeout(time2);
+       $("#outbrands").style.display="block";
+    }
+
+    $("#outbrands").onmouseout=daoHang[2].onmouseout=function(){
+        time2=setTimeout( function(){
+            $("#outbrands").style.display="none";
+    },400)}
+
+    
+}
+
+
+</script>
